@@ -1,0 +1,39 @@
+<a routerLink="/events">← Retour aux événements</a>
+
+@if (event(); as currentEvent) {
+  <article class="details">
+    <img
+      [src]="currentEvent.imageUrl"
+      [alt]="currentEvent.title"
+    />
+
+    <div class="details-content">
+      <p class="category">{{ currentEvent.category }}</p>
+      <h1>{{ currentEvent.title }}</h1>
+
+      <p>
+        <strong>Date :</strong>
+        {{ currentEvent.date | date:'dd/MM/yyyy' }}
+      </p>
+
+      <p><strong>Lieu :</strong> {{ currentEvent.place }}</p>
+
+      @if (currentEvent.price === 0) {
+        <p><strong>Prix :</strong> Gratuit</p>
+      } @else {
+        <p>
+          <strong>Prix :</strong>
+          {{ currentEvent.price | currency:'TND':'code':'1.2-2' }}
+        </p>
+      }
+
+      <h2>Description</h2>
+      <p>{{ currentEvent.description }}</p>
+    </div>
+  </article>
+} @else {
+  <section class="message">
+    <h1>Événement introuvable</h1>
+    <p>Aucun événement ne correspond à cet identifiant.</p>
+  </section>
+}

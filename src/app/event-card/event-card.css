@@ -1,0 +1,62 @@
+:host {
+  display: block;
+}
+
+.card {
+  height: 100%;
+  overflow: hidden;
+  background: white;
+  border: 1px solid #dce3eb;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px #17344b0d;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.category {
+  color: #167c86;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 21px;
+  margin: 12px 0;
+}
+
+p {
+  margin: 6px 0;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.actions {
+  margin-top: auto;
+  padding-top: 20px;
+  display: grid;
+  gap: 12px;
+}
+
+.detail-link {
+  color: #145b91;
+  font-weight: bold;
+}
+
+button.active {
+  background: #17344b;
+}

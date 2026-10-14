@@ -1,0 +1,23 @@
+.details {
+  margin-top: 24px;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #dce3eb;
+}
+
+img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+}
+
+.details-content,
+.message {
+  padding: 28px;
+}
+
+.category {
+  color: #167c86;
+  font-weight: bold;
+}
