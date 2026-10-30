@@ -6,14 +6,14 @@
   --border: #dce5ee;
 }
 
-/* Présentation de la page */
+/* Présentation */
 .page-intro {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 28px;
   padding: 36px;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   background: linear-gradient(120deg, #eef7fa, #f8fafc);
   border: 1px solid var(--border);
   border-radius: 20px;
@@ -40,7 +40,7 @@
   line-height: 1.7;
 }
 
-/* Compteur des favoris */
+/* Compteur */
 .counter {
   flex-shrink: 0;
   display: inline-flex;
@@ -64,21 +64,14 @@
   font-size: 20px;
 }
 
-/* Filtres par catégorie */
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 0 0 20px;
-}
-
-.filters button {
+/* Boutons */
+button {
   min-height: 44px;
-  padding: 10px 22px;
-  background: white;
-  color: var(--text-muted);
-  border: 1px solid var(--border);
-  border-radius: 999px;
+  padding: 11px 18px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: var(--teal);
+  color: white;
   font: inherit;
   font-size: 14px;
   font-weight: 600;
@@ -87,11 +80,46 @@
   transition:
     background-color 180ms ease,
     border-color 180ms ease,
-    color 180ms ease,
     box-shadow 180ms ease;
 }
 
-.filters button:hover {
+button:hover:not(:disabled) {
+  background: #076975;
+}
+
+button:focus-visible {
+  outline: 3px solid #0891b2;
+  outline-offset: 4px;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Bouton d’ajout */
+section > button {
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgb(8 127 140 / 15%);
+}
+
+/* Filtres */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 20px;
+}
+
+.filters button {
+  padding: 10px 22px;
+  background: white;
+  color: var(--text-muted);
+  border-color: var(--border);
+  border-radius: 999px;
+}
+
+.filters button:hover:not(:disabled) {
   background: #edf7f8;
   border-color: #91c4ca;
   color: var(--teal);
@@ -104,12 +132,7 @@
   box-shadow: 0 4px 12px rgb(22 50 79 / 15%);
 }
 
-.filters button:focus-visible {
-  outline: 3px solid #0891b2;
-  outline-offset: 4px;
-}
-
-/* Filtre des favoris */
+/* Favoris */
 .favorites-filter {
   display: inline-flex;
   align-items: center;
@@ -139,7 +162,7 @@
   outline-offset: 3px;
 }
 
-/* Nombre de résultats */
+/* Résultats */
 section > p {
   margin: 24px 0 16px;
   color: var(--text-muted);
@@ -147,7 +170,7 @@ section > p {
   font-weight: 500;
 }
 
-/* Grille des événements */
+/* Cartes */
 .event-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -155,7 +178,157 @@ section > p {
   gap: 24px;
 }
 
-/* Message lorsque la liste est vide */
+.event-item {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.event-item app-event-card {
+  display: block;
+  flex: 1;
+}
+
+/* Actions sous les cartes */
+.crud-actions {
+  display: flex;
+  gap: 10px;
+  padding: 12px 0 0;
+}
+
+.crud-actions button {
+  flex: 1;
+}
+
+button.secondary-button {
+  background: #e8eef5;
+  color: var(--navy);
+  border-color: #dce5ee;
+}
+
+button.secondary-button:hover:not(:disabled) {
+  background: #dce6f0;
+  border-color: #bccddd;
+}
+
+button.danger-button {
+  background: #fff1f2;
+  color: #be123c;
+  border-color: #fecdd3;
+}
+
+button.danger-button:hover:not(:disabled) {
+  background: #ffe4e6;
+  border-color: #fda4af;
+}
+
+/* Formulaire */
+.event-form-panel {
+  scroll-margin-top: 96px;
+  margin: 0 0 28px;
+  padding: 28px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgb(22 50 79 / 5%);
+}
+
+.event-form-panel h2 {
+  margin: 0 0 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #edf1f5;
+  color: var(--navy);
+  font-size: 22px;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.form-grid label {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-grid input,
+.form-grid select,
+.form-grid textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: var(--navy);
+  font: inherit;
+  font-weight: 400;
+}
+
+.form-grid textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-grid input:focus,
+.form-grid select:focus,
+.form-grid textarea:focus {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+  background: white;
+}
+
+.form-grid .ng-invalid.ng-touched {
+  border-color: #be123c;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #edf1f5;
+}
+
+/* Messages */
+section > p.error-message,
+.error-message {
+  padding: 14px 18px;
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  border-radius: 12px;
+  color: #9f1239;
+}
+
+section > p.success-message,
+.success-message {
+  padding: 14px 18px;
+  background: #ecfdf5;
+  border: 1px solid #bbf7d0;
+  border-radius: 12px;
+  color: #166534;
+}
+
+/* Aucun résultat */
 .empty {
   grid-column: 1 / -1;
   margin: 0;
@@ -211,19 +384,31 @@ section > p {
     padding: 10px 16px;
   }
 
-  .event-grid {
+  .event-grid,
+  .form-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
   }
 
   .favorites-filter {
+    box-sizing: border-box;
     width: 100%;
+  }
+
+  .event-form-panel {
+    padding: 20px;
+  }
+
+  .form-actions button {
+    flex: 1;
+  }
+
+  .crud-actions {
+    flex-wrap: wrap;
   }
 }
 
-/* Respect des préférences d’animation */
 @media (prefers-reduced-motion: reduce) {
-  .filters button {
+  button {
     transition: none;
   }
 }

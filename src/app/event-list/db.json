@@ -1,0 +1,64 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Atelier TypeScript",
+      "category": "Atelier",
+      "date": "2026-11-15",
+      "place": "Salle informatique",
+      "price": 0,
+      "imageUrl": "https://placehold.co/640x360/2563eb/ffffff?text=TypeScript",
+      "description": "Découvrez les types et les fonctions de TypeScript avec des exercices pratiques."
+    },
+    {
+      "id": 2,
+      "title": "Conférence sur l’intelligence artificielle",
+      "category": "Conférence",
+      "date": "2026-11-18",
+      "place": "Amphithéâtre",
+      "price": 10,
+      "imageUrl": "https://placehold.co/640x360/7c3aed/ffffff?text=IA",
+      "description": "Découvrez les applications de l’intelligence artificielle et échangez avec les intervenants."
+    },
+    {
+      "id": 3,
+      "title": "Tournoi de football",
+      "category": "Sport",
+      "date": "2026-11-20",
+      "place": "Terrain du campus",
+      "price": 5,
+      "imageUrl": "https://placehold.co/640x360/15803d/ffffff?text=Football",
+      "description": "Participez à une compétition sportive entre équipes étudiantes."
+    },
+    {
+      "id": 4,
+      "title": "Atelier Angular",
+      "category": "Atelier",
+      "date": "2026-11-22",
+      "place": "Laboratoire web",
+      "price": 15,
+      "imageUrl": "https://placehold.co/640x360/be123c/ffffff?text=Angular",
+      "description": "Créez des composants et découvrez les Signals et les routes Angular."
+    },
+    {
+      "id": 5,
+      "title": "Conférence cybersécurité",
+      "category": "Conférence",
+      "date": "2026-11-25",
+      "place": "Amphithéâtre",
+      "price": 0,
+      "imageUrl": "https://placehold.co/640x360/0f766e/ffffff?text=Cybersecurite",
+      "description": "Découvrez les bonnes pratiques pour protéger vos comptes et vos données."
+    },
+    {
+      "id": 6,
+      "title": "Course du campus",
+      "category": "Sport",
+      "date": "2026-11-28",
+      "place": "Entrée du campus",
+      "price": 3,
+      "imageUrl": "https://placehold.co/640x360/c2410c/ffffff?text=Course",
+      "description": "Rejoignez une course conviviale ouverte aux étudiants de tous niveaux."
+    }
+  ]
+}

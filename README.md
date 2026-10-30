@@ -57,3 +57,20 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Lancer l’application
+
+Dans un premier terminal :
+
+```bash
+npm run start:api
+```
+
+Dans un second terminal :
+
+```bash
+npm start
+```
+
+L’API json-server utilise db.json à la racine et expose les opérations sur http://localhost:3000/events. Les données sont enregistrées dans ce fichier.
+
